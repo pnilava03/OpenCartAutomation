@@ -1,0 +1,106 @@
++---src
+¦   +---main
+¦   ¦   +---java
+¦   ¦       +---com
+¦   ¦           +---qa
+¦   ¦               +---opencart
+¦   ¦                   +---constants
+¦   ¦                   ¦       AppConstant.java
+¦   ¦                   ¦       
+¦   ¦                   +---errors
+¦   ¦                   ¦       AppError.java
+¦   ¦                   ¦       
+¦   ¦                   +---exceptions
+¦   ¦                   ¦       BrowserException.java
+¦   ¦                   ¦       
+¦   ¦                   +---factory
+¦   ¦                   ¦       DriverFactory.java
+¦   ¦                   ¦       
+¦   ¦                   +---utils
+¦   ¦                           CSVUtil.java
+¦   ¦                           ElementUtil.java
+¦   ¦                           ExcelUtil.java
+¦   ¦                           JavaScriptUtil.java
+¦   ¦                           
+¦   +---test
+¦       +---java
+¦       ¦   +---com
+¦       ¦       +---qa
+¦       ¦           +---opencart
+¦       ¦               +---base
+¦       ¦               ¦       BaseTest.java
+¦       ¦               ¦       
+¦       ¦               +---pages
+¦       ¦               ¦       AccountPage.java
+¦       ¦               ¦       LoginPage.java
+¦       ¦               ¦       RegisterPage.java
+¦       ¦               ¦       ResultsPage.java
+¦       ¦               ¦       
+¦       ¦               +---tests
+¦       ¦                       AccountPageTest.java
+¦       ¦                       LoginPageTest.java
+¦       ¦                       RegisterPageTest.java
+¦       ¦                       ResultsPageTest.java
+¦       ¦                       
+¦       +---resource
+¦           +---config
+¦           ¦       config.properties
+¦           ¦       
+¦           +---testdata
+¦           +---testngxml
++---target
+    +---classes
+    ¦   +---com
+    ¦   ¦   +---qa
+    ¦   ¦       +---opencart
+    ¦   ¦           +---constants
+    ¦   ¦           ¦       AppConstant.class
+    ¦   ¦           ¦       
+    ¦   ¦           +---errors
+    ¦   ¦           ¦       AppError.class
+    ¦   ¦           ¦       
+    ¦   ¦           +---exceptions
+    ¦   ¦           ¦       BrowserException.class
+    ¦   ¦           ¦       
+    ¦   ¦           +---factory
+    ¦   ¦           ¦       DriverFactory.class
+    ¦   ¦           ¦       
+    ¦   ¦           +---utils
+    ¦   ¦                   CSVUtil.class
+    ¦   ¦                   ElementUtil.class
+    ¦   ¦                   ExcelUtil.class
+    ¦   ¦                   JavaScriptUtil.class
+    ¦   ¦                   
+    ¦   +---config
+    ¦   ¦       config.properties
+    ¦   ¦       
+    ¦   +---META-INF
+    ¦   ¦   ¦   MANIFEST.MF
+    ¦   ¦   ¦   
+    ¦   ¦   +---maven
+    ¦   ¦       +---AutomationFramework
+    ¦   ¦           +---AutomationFramework
+    ¦   ¦                   pom.properties
+    ¦   ¦                   pom.xml
+    ¦   ¦                   
+    ¦   +---testdata
+    ¦   +---testngxml
+    +---test-classes
+        +---com
+            +---qa
+                +---opencart
+                    +---base
+                    ¦       BaseTest.class
+                    ¦       
+                    +---pages
+                    ¦       AccountPage.class
+                    ¦       LoginPage.class
+                    ¦       RegisterPage.class
+                    ¦       ResultsPage.class
+                    ¦       
+                    +---tests
+                            AccountPageTest.class
+                            LoginPageTest.class
+                            RegisterPageTest.class
+                            ResultsPageTest.class
+                            

@@ -43,12 +43,22 @@ public class AccountPage {
 	 * @throws InterruptedException
 	 * 
 	 */
-	public LogoutPage doHoverMouseOnMyAccountDropdown() throws InterruptedException {
+	public SearchForProductPage doHoverMouseOnMyAccountDropdown() throws InterruptedException {
+		WebElement wb = elementUtil.getElement(MyaccountDropDown);
+		elementUtil.do_mouseHover(wb);
+		return new SearchForProductPage(driver);
+
+	}
+	
+	
+	public LogoutPage hoverMouseOnMyAccountDropdown() throws InterruptedException {
 		WebElement wb = elementUtil.getElement(MyaccountDropDown);
 		elementUtil.do_mouseHover(wb);
 		return new LogoutPage(driver);
 
 	}
+	
+	
 
 	
 

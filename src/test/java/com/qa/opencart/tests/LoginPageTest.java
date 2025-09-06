@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.qa.opencart.base.BaseTest;
-import com.qa.opencart.constants.AppConstant;
+import static com.qa.opencart.constants.AppConstant.*;
 import com.qa.opencart.utils.PropertiesUtil;
 
 public class LoginPageTest extends BaseTest {
@@ -16,7 +16,7 @@ public class LoginPageTest extends BaseTest {
 	@Test(priority = 0)
 	public void verifyPageTitle() {
 		String actualTitle = loginPage.getLoginPageTitle();
-		Assert.assertEquals(actualTitle, AppConstant.LOGIN_PAGE_TITLE);
+		Assert.assertEquals(actualTitle, LOGIN_PAGE_TITLE);
 	}
 
 	@Test(priority = 1)
@@ -28,7 +28,7 @@ public class LoginPageTest extends BaseTest {
 	@Test(priority = 2)
 	public void verifyReturingCustomerText() {
 		String actualText = loginPage.getReturningCustomerText();
-		Assert.assertEquals(actualText, AppConstant.RETURNING_CUSTOMER_TEXT);
+		Assert.assertEquals(actualText, RETURNING_CUSTOMER_TEXT);
 	}
 
 	@Test(priority = 3)

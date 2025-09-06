@@ -2,6 +2,7 @@ package com.qa.opencart.utils;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.Alert;
@@ -402,7 +403,12 @@ public class ElementUtil {
 	 */
 	public List<WebElement> waitForAllElementsVisible(By locator, int timeOut) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+		try {
 		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+		}catch(TimeoutException e) {
+			System.out.println("===elements are not visible===");
+			return Collections.EMPTY_LIST;
+		}
 	}
 	
 

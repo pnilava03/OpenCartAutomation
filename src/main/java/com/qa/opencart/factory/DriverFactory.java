@@ -3,6 +3,7 @@ package com.qa.opencart.factory;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -68,6 +69,16 @@ public class DriverFactory {
 		case "safari":
 			if (tlDriver != null) {
 				tlDriver.set(new SafariDriver());
+			} else {
+				throw new NullPointerException("Local thread driver is null :: " + tlDriver);
+			}
+			break;
+			
+		case "headless":
+			if (tlDriver != null) {
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless");
+				tlDriver.set(new ChromeDriver(options));
 			} else {
 				throw new NullPointerException("Local thread driver is null :: " + tlDriver);
 			}

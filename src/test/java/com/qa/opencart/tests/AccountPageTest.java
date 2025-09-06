@@ -16,7 +16,7 @@ public class AccountPageTest extends BaseTest {
 	
 	PropertiesUtil prop= new PropertiesUtil();
 	
-	@BeforeClass
+	@BeforeClass (alwaysRun = true)
 	public void accountPageSetUp() {
 		accountsPage= loginPage.doLogin(prop.getPropertiesValue("userName"), prop.getPropertiesValue("Password"));
 	}

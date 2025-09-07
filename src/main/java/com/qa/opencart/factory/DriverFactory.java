@@ -124,7 +124,7 @@ public class DriverFactory {
 	 * @return driver
 	 */
 
-	public WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		return tlDriver.get();
 	}
 	

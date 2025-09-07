@@ -52,6 +52,7 @@ public class AccountPage {
 	
 	
 	public LogoutPage hoverMouseOnMyAccountDropdown() throws InterruptedException {
+		elementUtil.waitForElementVisible(MyAccount, DEFAULT_TIME_OUT);
 		WebElement wb = elementUtil.getElement(MyaccountDropDown);
 		elementUtil.do_mouseHover(wb);
 		return new LogoutPage(driver);

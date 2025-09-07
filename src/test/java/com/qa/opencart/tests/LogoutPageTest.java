@@ -5,6 +5,8 @@ package com.qa.opencart.tests;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.qa.opencart.base.BaseTest;
 import static com.qa.opencart.constants.AppConstant.*;
 import com.qa.opencart.utils.PropertiesUtil;
@@ -27,6 +29,7 @@ public class LogoutPageTest extends BaseTest {
 		logoutPage.clickOnLogout();
 		Thread.sleep(3000);
 		String verifyActualText= logoutPage.verifyLogoutText();
+		ChainTestListener.log("Logout Page Text is : "+ verifyActualText);
 		Assert.assertEquals(verifyActualText, LOGOUT_PAGE_TEXT);
 		
 		

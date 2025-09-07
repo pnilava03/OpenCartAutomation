@@ -9,7 +9,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.qa.opencart.base.BaseTest;
+import com.qa.opencart.constants.AppConstant;
 import com.qa.opencart.utils.PropertiesUtil;
 
 public class AccountPageTest extends BaseTest {
@@ -25,6 +27,7 @@ public class AccountPageTest extends BaseTest {
 	@Test (priority = 1)
 	public void accountPageTitleTest() {
 		String actualTitle= accountsPage.getAccountPageTitle();
+		ChainTestListener.log("Account Page Title is : "+ actualTitle);
 		System.out.println("Account Page Title is: "+ actualTitle);
 	}
 	
@@ -38,11 +41,9 @@ public class AccountPageTest extends BaseTest {
 	@Test (priority = 3)
 	public void myOrderAndMyAffiliateAccountTextTest() {
 		List<String> actualList= accountsPage.getMyOrdersAndMyAffiliateAccountText();
-		List<String> expectedList= Arrays.asList("My Account","My Orders","My Affiliate Account");
-		for(String s: actualList) {
-			System.out.println(s);
-			Assert.assertTrue(actualList.equals(expectedList));
-		}
+		ChainTestListener.log("List of header Text is : "+ actualList);
+		Assert.assertEquals(actualList, AppConstant.EXPECTED_ACCOUNTS_SECTION_LIST);
+
 }
 	
 }
